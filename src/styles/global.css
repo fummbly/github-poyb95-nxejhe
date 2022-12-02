@@ -1,3 +1,9 @@
+:root {
+  --dark-background: #000000;
+  --acsent-color: #ff9776;
+  --purple: #4c1d95;
+}
+
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
@@ -20,6 +26,37 @@ h1 {
   font-size: 2.5rem;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
+
+.blogs {
+  font-size: 1.5rem;
+  color: var(--purple);
+  padding-left: 2rem;
+}
+
+.blog:hover {
+  color: #d9a4fc;
+}
+
+.tag {
+  background-color: #d8d7d7;
+  color: #000000;
+}
+
+.tag:hover {
+  background-color: #929292;
+}
+
 /* nav styles */
 
 .hamburger {
@@ -37,8 +74,6 @@ h1 {
 
 .nav-links {
   width: 100%;
-  top: 5rem;
-  left: 48px;
   background-color: #ff9776;
   display: none;
   margin: 0;
@@ -52,10 +87,10 @@ h1 {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: var(--purple);
 }
 
-.nav-links a:hover,
-a:focus {
+.nav-links a:hover {
   background-color: #ff9776;
 }
 
@@ -63,21 +98,39 @@ a:focus {
   display: unset;
 }
 
-.dark body {
-  background-color: #0d0905;
-  color: #fff;
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark {
+  background-color: var(--dark-background);
+  color: white;
 }
 
 .dark .nav-links a {
   color: #fff;
 }
 
+.dark .tag {
+  background-color: #292929;
+  color: var(--acsent-color);
+}
+
+.dark .tag:hover {
+  background-color: #505050;
+}
+
+.dark .blogs {
+  color: var(--acsent-color);
+}
+
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     background: none;
   }
 
@@ -88,5 +141,9 @@ a:focus {
 
   .hamburger {
     display: none;
+  }
+
+  .icons {
+    justify-content: flex-end;
   }
 }

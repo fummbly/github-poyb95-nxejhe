@@ -8,7 +8,7 @@ const pageTitle = "My Astro Blog";
 
 <BaseLayout pageTitle={pageTitle}>
   <p>This is where i post my journey</p>
-  <ul>
+  <ul class="blogs">
     {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
   </ul>
 </BaseLayout>
